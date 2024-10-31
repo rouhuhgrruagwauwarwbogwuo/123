@@ -1,32 +1,8 @@
 import streamlit as st
 import pandas as pd
-# import matplotlib.font_manager as fm
 import requests
 import os
 import plotly.graph_objects as go
-
-# 下載字型文件
-# font_url = 'https://example.com/path/to/TaipeiSansTCBeta-Regular.ttf'  # 替換為字型文件的有效 URL
-font_path = 'TaipeiSansTCBeta-Regular.ttf'
-
-# response = requests.get(font_url)
-# if response.status_code == 200:
-#     with open(font_path, 'wb') as font_file:
-#         font_file.write(response.content)
-#     st.success("字型文件下載成功！")
-# else:
-#     st.error("字型文件下載失敗，狀態碼：{}".format(response.status_code))
-
-# 確認字型文件是否存在
-if os.path.exists(font_path):
-    try:
-        fm.fontManager.addfont(font_path)
-        st.success("字型文件已成功加載！")
-    except Exception as e:
-        st.error(f"加載字型時出現錯誤：{e}")
-else:
-    st.error("字型文件未找到！")
-
 # 設定頁面標題
 st.title("AI犯罪簡報")
 
